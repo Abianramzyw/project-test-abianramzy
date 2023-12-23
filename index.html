@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT TEST</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/logo.png" class="logo" alt="" /></a>
+
+      <div>
+        <ul id="navbar">
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a class="active" href="index.html">Ideas</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="banner">
+      <h1>IDEAS</h1>
+      <h4>Where all our great things begin</h4>
+      <span></span>
+    </section>
+
+    <section id="post">
+     <div id="post_container"></div>
+    </section>
+
+    <script type="text/javascript">
+      var lastScrollTop = 0;
+      navbar = document.getElementById("header");
+      window.addEventListener("scroll", function () {
+        var scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+          navbar.style.top = "-80px";
+        } else {
+          navbar.style.top = "0";
+          navbar.style.background = "rgba(230, 99, 43, 0.5)";
+        }
+        lastScrollTop = scrollTop;
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
